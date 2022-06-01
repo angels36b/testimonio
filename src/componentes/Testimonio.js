@@ -1,18 +1,18 @@
 import React from 'react';
 import '../style/Testimonio.css'
 
-function Testimonio(){
+function Testimonio(props) {
   return(
    <div className='contenedor-testimonio'>
      <img 
         className='imagen-testimonio'
-        src={require ('../imagenes/Testimonio-Beatles.jpg')}
-        alt='Foto con Beatle'
+        src={require (`../imagenes/Testimonio-${props.imagen}.png`)}
+        alt='Foto con react'
      />
      <div className='contenedor-texto-testimonio'>
-       <p className='titulo-testimonio'> Angel junto a los Beatles</p>
-       <p className='Ciudad-testimonio'>ciudad de New york</p>
-       <p className='texto-testimonio'> "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."  </p>
+       <p className='titulo-testimonio'> <strong>  {props.titulo} </strong></p>
+       <p className='ciudad-testimonio'> <strong> {props.ciudad} </strong></p>
+       <p className='texto-testimonio'> "{props.testimonio}"</p>
        </div> 
 
    </div> 
