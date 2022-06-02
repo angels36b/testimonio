@@ -4,11 +4,11 @@ import '../style/Testimonio.css'
 function Testimonio(props) {
   return(
    <div className='contenedor-testimonio'>
+     
      <img 
         className='imagen-testimonio'
         src={require (`../imagenes/Testimonio-${props.imagen}.png`)}
-        alt='Foto con react'
-     />
+        alt='Foto con react' />
      <div className='contenedor-texto-testimonio'>
        <p className='titulo-testimonio'> <strong>  {props.titulo} </strong></p>
        <p className='ciudad-testimonio'> <strong> {props.ciudad} </strong></p>
